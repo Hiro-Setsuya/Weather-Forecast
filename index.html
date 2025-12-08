@@ -90,7 +90,7 @@
         <div class="col-lg-7 mb-4 mb-lg-0">
           <div class="card rounded-3 shadow-sm p-5 text-center h-100">
             <h2 id="city-name">City</h2>
-            <p id="weather-desc">Condition</p>
+            <p class="text-muted" id="weather-desc">Condition</p>
 
             <div class="mb-4 text-center">
               <div
@@ -131,12 +131,16 @@
     </div>
 
     <!-- 5-Day Forecast -->
-    <div class="container">
-      <div class="row">
-        <div class="col"></div>
+    <div class="container my-4">
+      <div class="card rounded-3 shadow-sm p-4">
+        <h4 class="mb-4">5-Day Forecast</h4>
+        <div class="row text-center g-3" id="forecast-container">
+          <!-- Forecast days will be dynamically inserted here -->
+        </div>
       </div>
     </div>
 
+    <script src="assets/script/config.js"></script>
     <script src="assets/script/script.js"></script>
 
     <!-- Bootstrap JavaScript Libraries -->
