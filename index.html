@@ -32,8 +32,10 @@
         <div
           class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start gap-2"
         >
-          <i class="bi bi-cloud-sun-fill"></i>
-          <h4 class="mb-0">Weather Forecast Dashboard</h4>
+          <a href="index.html">
+            <i class="bi bi-cloud-sun-fill"></i>
+            <h4 class="mb-0">Weather Forecast Dashboard</h4>
+          </a>
         </div>
 
         <div
@@ -43,16 +45,38 @@
             class="d-flex align-items-center justify-content-center justify-content-md-end w-100"
             role="search"
           >
-            <div class="input-group" style="max-width: 350px">
-              <span class="input-group-text bg-white border-end-0">
-                <i class="bi bi-search"></i>
-              </span>
-              <input
-                class="form-control border-start-0"
-                type="search"
-                placeholder="Search for a city"
-                aria-label="Search"
-              />
+            <div
+              class="position-relative"
+              style="max-width: 350px; width: 100%"
+            >
+              <div class="input-group">
+                <input
+                  class="form-control border-start-0"
+                  type="search"
+                  placeholder="Search for a city"
+                  aria-label="Search"
+                  id="city-input"
+                  autocomplete="off"
+                />
+                <button
+                  class="input-group-text bg-white border-end-0"
+                  id="search-form-btn"
+                >
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+              <ul
+                id="suggestions-list"
+                class="list-group position-absolute w-100 shadow-lg"
+                style="
+                  display: none;
+                  max-height: 300px;
+                  overflow-y: auto;
+                  z-index: 1050;
+                  top: 100%;
+                  margin-top: 2px;
+                "
+              ></ul>
             </div>
           </form>
         </div>
@@ -65,24 +89,17 @@
         <!-- City Weather -->
         <div class="col-lg-7 mb-4 mb-lg-0">
           <div class="card rounded-3 shadow-sm p-5 text-center h-100">
-            <h2 class="mb-1">New York</h2>
-            <p class="text-muted mb-4">Clear Sky</p>
+            <h2 id="city-name">City</h2>
+            <p id="weather-desc">Condition</p>
 
-            <div class="mb-4">
-              <svg
-                class="mx-auto text-primary"
-                style="width: 120px; height: 120px"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="3" />
-                <path
-                  d="M8 0v2M8 14v2M0 8h2M14 8h2M2.5 2.5l1.4 1.4M12.1 12.1l1.4 1.4M2.5 13.5l1.4-1.4M12.1 3.9l1.4-1.4"
-                />
-              </svg>
+            <div class="mb-4 text-center">
+              <div
+                id="weather-icon"
+                style="width: 120px; height: 120px; margin: 0 auto"
+              ></div>
             </div>
 
-            <h1 class="display-1 mb-0">21°C</h1>
+            <h1 id="temperature">--°C</h1>
           </div>
         </div>
 
@@ -94,19 +111,19 @@
             <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
               <i class="bi bi-thermometer-half text-primary me-3 fs-4"></i>
               <span class="me-auto">Feels Like</span>
-              <strong>19°C</strong>
+              <strong id="feels-like">--°C</strong>
             </div>
 
             <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
               <i class="bi bi-moisture text-primary me-3 fs-4"></i>
               <span class="me-auto">Humidity</span>
-              <strong>65%</strong>
+              <strong id="humidity">--%</strong>
             </div>
 
             <div class="d-flex align-items-center">
               <i class="bi bi-wind text-primary me-3 fs-4"></i>
               <span class="me-auto">Wind Speed</span>
-              <strong>15 km/h</strong>
+              <strong id="wind-speed">-- km/h</strong>
             </div>
           </div>
         </div>
@@ -120,7 +137,7 @@
       </div>
     </div>
 
-    <script></script>
+    <script src="assets/script/script.js"></script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script
