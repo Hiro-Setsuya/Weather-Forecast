@@ -247,7 +247,7 @@ async function fetchFiveDayForecast(lat, lon) {
           <p class="mb-0"><strong>${Math.round(day.temp_max)}° / ${Math.round(
         day.temp_min
       )}°</strong></p>
-          <small class="text-muted">${day.description}</small>
+          <p class="text-muted">${day.description.toUpperCase()}</p>
         </div>
       `;
 
