@@ -20,6 +20,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+    <!-- Google Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!-- Custome CSS -->
     <link rel="stylesheet" href="assets/styles/style.css" />
@@ -33,7 +38,7 @@
           class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start gap-2"
         >
           <a href="index.html">
-            <i class="bi bi-cloud-sun-fill"></i>
+            <span class="material-symbols-outlined">partly_cloudy_day</span>
             <h4 class="mb-0">Weather Forecast Dashboard</h4>
           </a>
         </div>
@@ -62,7 +67,7 @@
                   class="input-group-text bg-white border-end-0"
                   id="search-form-btn"
                 >
-                  <i class="bi bi-search"></i>
+                  <span class="material-symbols-outlined">search</span>
                 </button>
               </div>
               <ul
@@ -109,19 +114,25 @@
             <h4 class="mb-4">Current Conditions</h4>
 
             <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
-              <i class="bi bi-thermometer-half text-primary me-3 fs-4"></i>
+              <span class="material-symbols-outlined text-primary me-3 fs-4"
+                >thermostat</span
+              >
               <span class="me-auto">Feels Like</span>
               <strong id="feels-like">--°C</strong>
             </div>
 
             <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
-              <i class="bi bi-moisture text-primary me-3 fs-4"></i>
+              <span class="material-symbols-outlined text-primary me-3 fs-4"
+                >water_drop</span
+              >
               <span class="me-auto">Humidity</span>
               <strong id="humidity">--%</strong>
             </div>
 
             <div class="d-flex align-items-center">
-              <i class="bi bi-wind text-primary me-3 fs-4"></i>
+              <span class="material-symbols-outlined text-primary me-3 fs-4"
+                >air</span
+              >
               <span class="me-auto">Wind Speed</span>
               <strong id="wind-speed">-- km/h</strong>
             </div>
