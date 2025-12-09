@@ -1,5 +1,4 @@
-// API key from configuration
-const APIKEY = CONFIG.APIKEY;
+const APIKEY = "83e42cf5b4c1601a10eee854e16fd8bd";
 // DOM elements for city input and search functionality
 const cityInput = document.getElementById("city-input");
 const suggestionsList = document.getElementById("suggestions-list");
