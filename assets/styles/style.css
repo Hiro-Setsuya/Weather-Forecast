@@ -105,6 +105,21 @@ a:hover .material-symbols-outlined {
   background-color: #f8f9fa;
 }
 
+/* Search Button */
+#search-form-btn {
+  transition: all 0.3s ease;
+}
+
+#search-form-btn:hover {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd;
+  transform: scale(1.05);
+}
+
+#search-form-btn:hover .material-symbols-outlined {
+  color: #ffffff;
+}
+
 /* Suggestions List */
 #suggestions-list {
   border: 1px solid #e0e0e0;
